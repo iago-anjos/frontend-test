@@ -18,7 +18,17 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
 }
-
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.header {
+  padding: 40px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
 .hero {
   background-color: var(--color-white);
   padding: 160px 0 80px;
