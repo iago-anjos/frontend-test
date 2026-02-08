@@ -1,6 +1,7 @@
 const sunlightSelect = document.getElementById("sunlight");
 const waterSelect = document.getElementById("water");
 const petsSelect = document.getElementById("pets");
+const resultsSection = document.getElementById("results");
 let allPlants = [];
 
 fetch("plants.json")
