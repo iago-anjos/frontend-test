@@ -1,5 +1,6 @@
 const sunlightSelect = document.getElementById("sunlight");
 const waterSelect = document.getElementById("water");
+const petsSelect = document.getElementById("pets");
 let allPlants = [];
 
 fetch("plants.json")
@@ -7,6 +8,8 @@ fetch("plants.json")
   .then((data) => (allPlants = data))
   .catch((e) => console.error(e));
 
-function filterPlants() {
+const filterPlants = () => {
   const sun = sunlightSelect.value;
-}
+  const water = waterSelect.value;
+  const pets = petsSelect.value;
+};
