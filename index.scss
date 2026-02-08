@@ -1,4 +1,56 @@
+:root {
+  --color-primary: #15573f;
+  --color-accent: #fd9872;
+  --color-bg: green;
+  --color-white: #ffffff;
+  --color-text: #6e6e6e;
+  --color-title: #0c0c0c;
+  --font-main: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    font-family: "Montserrat", sans-serif;
-    background-color: green;
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.hero {
+  background-color: var(--color-white);
+  padding: 160px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-title {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--color-title);
+  max-width: 450px;
+  line-height: 1.1;
+}
+.hero-images {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+}
+.hero-img-person {
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  height: 90%;
+}
+@media (max-width: 900px) {
+  .hero-images {
+    display: none;
+  }
+  .hero-title {
+    font-size: 48px;
+    text-align: center;
+  }
 }
