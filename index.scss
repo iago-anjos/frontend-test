@@ -55,6 +55,36 @@ body {
   bottom: 0;
   height: 90%;
 }
+
+.filters {
+  padding: 60px 0;
+}
+.filters-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.filter-group-label {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: flex-end;
+}
+.filter-group__icon {
+  width: 60px;
+  margin-bottom: 10px;
+}
+.filter-group__select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: var(--color-white);
+  font-family: var(--font-main);
+  color: var(--color-text);
+}
+
 @media (max-width: 900px) {
   .hero-images {
     display: none;
