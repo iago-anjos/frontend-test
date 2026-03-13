@@ -1,178 +1,230 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <title>Green Thumb - Find your next plant</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Green Thumb</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
-
   <body>
-    <header class="header">
-      <div class="container header-content">
+    <section class="hero">
+      <img
+        src="images/hero/desktop/left-leaves.png"
+        alt=""
+        class="hero__left-leaves"
+      />
+      <img
+        src="images/hero/desktop/right-leaves.png"
+        alt=""
+        class="hero__right-leaves"
+      />
+      <img
+        src="images/hero/desktop/plantperson.png"
+        alt=""
+        class="hero__plantperson"
+      />
+      <div class="hero__logo-wrap">
+        <img src="images/icons/logo-white.svg" alt="green thumb." />
+      </div>
+      <p class="hero__title">Find your next green friend</p>
+      <div class="hero__arrow-wrap">
+        <img src="images/icons/arrow-down.svg" alt="" class="hero__arrow" />
+      </div>
+
+      <div class="mobile-inner">
         <img
-          src="images/icons/logo-white.svg"
-          alt="Green Thumb Logo"
-          class="logo"
+          src="images/hero/mobile/mobile-plantperson.png"
+          alt=""
+          class="hero__mobile-plantperson"
         />
-        <button id="open-cart" class="cart-btn">
+        <img
+          src="images/hero/mobile/mobile-leaves.png"
+          alt=""
+          class="hero__mobile-leaves"
+        />
+        <div class="hero__logo-wrap--m">
+          <img src="images/icons/logo-white.svg" alt="green thumb." />
+        </div>
+        <p class="hero__title--m">Find your next green friend</p>
+        <div class="hero__arrow-wrap--m">
+          <img src="images/icons/arrow-down.svg" alt="" class="hero__arrow" />
+        </div>
+      </div>
+    </section>
+
+    <section class="filters">
+      <div class="mobile-inner">
+        <div class="filter-group" id="filter-sunlight">
           <img
-            src="images/icons/shopping-cart.svg"
-            alt="Cart"
-            class="cart-icon"
+            src="images/illustrations/sun.png"
+            alt=""
+            class="filter-group__icon"
           />
-          <span id="cart-count">0</span>
-        </button>
-      </div>
-    </header>
-
-    <main id="main-content">
-      <section class="hero">
-        <div class="container hero-container">
-          <div class="hero-content">
-            <h1 class="hero-title">Find your next green friend</h1>
-          </div>
-          <div class="hero-images">
-            <img
-              src="images/hero/desktop/left-leaves.png"
-              alt=""
-              class="hero-img-left desktop-only"
-            />
-            <img
-              src="images/hero/desktop/plantperson.png"
-              alt=""
-              class="hero-img-person desktop-only"
-            />
-            <img
-              src="images/hero/desktop/right-leaves.png"
-              alt=""
-              class="hero-img-right desktop-only"
-            />
-            <img
-              src="images/hero/mobile/mobile-leaves.png"
-              alt=""
-              class="hero-img-leaves mobile-only"
-            />
-            <img
-              src="images/hero/mobile/mobile-plantperson.png"
-              alt=""
-              class="hero-img-person-mobile mobile-only"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section class="filters">
-        <div class="container filters-container">
-          <div class="filter-group">
-            <div class="filter-group-label">
+          <p class="filter-group__label">
+            <strong>1.</strong
+            ><span class="filter-group__label-light"> Set the amount of </span
+            ><strong>sunlight</strong
+            ><span class="filter-group__label-light">
+              your plant will get.</span
+            >
+          </p>
+          <div class="dropdown" data-filter="sunlight">
+            <button
+              class="dropdown__btn"
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="dropdown__value">Select...</span>
               <img
-                src="images/illustrations/sun.png"
+                src="images/icons/arrow-down.svg"
                 alt=""
-                class="filter-group-icon"
+                class="dropdown__chevron"
               />
-              <p>1. Set the amount of <strong>sunlight</strong></p>
-            </div>
-            <select id="sunlight" class="filter-group-select">
-              <option value="" disabled selected>Select...</option>
-              <option value="no">No sun</option>
-              <option value="low">Low sun</option>
-              <option value="high">High sun</option>
-            </select>
-          </div>
-          <div class="filter-group">
-            <div class="filter-group-label">
-              <img
-                src="images/illustrations/wateringcan.png"
-                alt=""
-                class="filter-group-icon"
-              />
-              <p>
-                2. How often do you want to <strong>water</strong> your plant?
-              </p>
-            </div>
-            <select id="water" class="filter-group-select">
-              <option value="" disabled selected>Select...</option>
-              <option value="rarely">Rarely</option>
-              <option value="regularly">Regularly</option>
-              <option value="daily">Daily</option>
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <div class="filter-group-label">
-              <img
-                src="images/illustrations/dog.png"
-                alt=""
-                class="filter-group-icon"
-              />
-              <p>3. Do you have pets? Do they <strong>chew</strong> plants?</p>
-            </div>
-            <select id="pets" class="filter-group-select">
-              <option value="" disabled selected>Select...</option>
-              <option value="false">No/They don't care</option>
-              <option value="true">Yes</option>
-            </select>
-          </div>
-        </div>
-      </section>
-
-      <section id="results" class="results results-empty">
-        <div class="container">
-          <div class="results-empty-state">
-            <div class="results-empty-content">
-              <h2 class="results-title">No results yet...</h2>
-              <p class="results-text">
-                Use the filters above to find the perfect plant for your
-                environment!
-              </p>
-              <img
-                src="images/illustrations/pick.png"
-                alt=""
-                class="results-empty-img"
-              />
-            </div>
-          </div>
-
-          <div class="results-content" style="display: none">
-            <div class="results-header">
-              <img
-                src="images/illustrations/pick.png"
-                alt=""
-                class="results-icon"
-              />
-              <h2 class="results-title">Our picks for you</h2>
-            </div>
-            <div id="plants-grid" class="plants-grid"></div>
-            <button id="back-to-top" class="btn-top">
-              <img src="images/icons/arrow-up.svg" alt="" />
-              back to top
             </button>
+            <ul class="dropdown__list" role="listbox">
+              <li class="dropdown__item" data-value="no" role="option">
+                No sunlight
+              </li>
+              <li class="dropdown__item" data-value="low" role="option">
+                Low sunlight
+              </li>
+              <li class="dropdown__item" data-value="high" role="option">
+                High sunlight
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-      <div id="cart-drawer" class="cart-drawer">
-        <div class="cart-drawer-content">
-          <div class="cart-drawer-header">
-            <h2>Your Cart</h2>
-            <button id="close-cart" class="close-btn">&times;</button>
+
+        <div class="filter-group" id="filter-water">
+          <img
+            src="images/illustrations/wateringcan.png"
+            alt=""
+            class="filter-group__icon filter-group__icon--water"
+          />
+          <p class="filter-group__label filter-group__label--water">
+            <strong>2.</strong
+            ><span class="filter-group__label-light">
+              How often do you want to </span
+            ><strong>water</strong
+            ><span class="filter-group__label-light"> your plant?</span>
+          </p>
+          <div class="dropdown" data-filter="water">
+            <button
+              class="dropdown__btn"
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="dropdown__value">Select...</span>
+              <img
+                src="images/icons/arrow-down.svg"
+                alt=""
+                class="dropdown__chevron"
+              />
+            </button>
+            <ul class="dropdown__list" role="listbox">
+              <li class="dropdown__item" data-value="rarely" role="option">
+                Rarely
+              </li>
+              <li class="dropdown__item" data-value="regularly" role="option">
+                Regularly
+              </li>
+              <li class="dropdown__item" data-value="frequently" role="option">
+                Frequently
+              </li>
+            </ul>
           </div>
-          <div id="cart-items" class="cart-items"></div>
-          <div class="cart-drawer-footer">
-            <div class="cart-total">
-              <span>Total:</span>
-              <strong id="cart-total-value">$0</strong>
-            </div>
-            <button class="btn-checkout">Finish Order</button>
+        </div>
+
+        <div class="filter-group" id="filter-pets">
+          <img
+            src="images/illustrations/dog.png"
+            alt=""
+            class="filter-group__icon filter-group__icon--dog"
+          />
+          <p class="filter-group__label">
+            <strong>3.</strong
+            ><span class="filter-group__label-light">
+              Do you have pets? Do they </span
+            ><strong>chew</strong
+            ><span class="filter-group__label-light"> plants?</span>
+          </p>
+          <div class="dropdown" data-filter="pets">
+            <button
+              class="dropdown__btn"
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="dropdown__value">Select...</span>
+              <img
+                src="images/icons/arrow-down.svg"
+                alt=""
+                class="dropdown__chevron"
+              />
+            </button>
+            <ul class="dropdown__list" role="listbox">
+              <li class="dropdown__item" data-value="false" role="option">
+                No pets
+              </li>
+              <li class="dropdown__item" data-value="true" role="option">
+                Yes, I have pets
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <div id="cart-overlay" class="cart-overlay"></div>
-    </main>
+    </section>
+
+    <section class="results">
+      <div id="no-results" class="no-results">
+        <div class="mobile-inner">
+          <p class="no-results__title">No results yet...</p>
+          <p class="no-results__subtitle">
+            Use the filters above to find the plant that best fits your
+            environment :)
+          </p>
+          <div class="no-results__illustration"></div>
+        </div>
+      </div>
+
+      <div id="picks" class="picks" hidden>
+        <div class="mobile-inner">
+          <img src="images/illustrations/pick.png" alt="" class="picks__icon" />
+          <p class="picks__title">Our picks for you</p>
+          <div class="plant-grid" id="plant-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <button class="cart-btn" id="open-cart" aria-label="Open cart">
+      <img src="images/icons/shopping-cart.svg" alt="" class="cart-icon" />
+      <span id="cart-count">0</span>
+    </button>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart">
+      <div class="cart-drawer-content">
+        <div class="cart-drawer-header">
+          <h2>Your Cart</h2>
+          <button class="close-btn" id="close-cart">×</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-drawer-footer">
+          <div class="cart-total">
+            <span>Total</span>
+            <strong id="cart-total-value">$0</strong>
+          </div>
+          <button class="btn-checkout">Checkout</button>
+        </div>
+      </div>
+    </aside>
+
     <script src="main.js"></script>
   </body>
 </html>
